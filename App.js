@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: "red"}}>
       <View style={styles.topNavBar}>
         <View style={styles.menuSection}>
           <Text>Menu Section</Text>
@@ -88,11 +88,13 @@ const styles = StyleSheet.create({
   importantMessagesSection: {
     flex: .05,
     borderWidth: 3,
-    borderColor: "green"
+    borderColor: "green",
+    backgroundColor: "#097969"
   },
   quickControlsSection: {
     flex: .55,
     borderWidth: 3,
-    borderColor: "yellow"
+    borderColor: "yellow",
+    backgroundColor: "#C1E1C1"
   }
 });
