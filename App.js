@@ -1,36 +1,39 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: "red"}}>
-      <View style={styles.topNavBar}>
-        <View style={styles.menuSection}>
-          <Text>Menu Section</Text>
+    <>
+      <SafeAreaView style={{flex: 1, backgroundColor: "red", marginTop: StatusBar.currentHeight}}>
+        <View style={styles.topNavBar}>
+          <View style={styles.menuSection}>
+            <Text>Menu Section</Text>
+          </View>
+          <View style={styles.userProfileSection}>
+            <Text>User Profile Section</Text>
+          </View>
         </View>
-        <View style={styles.userProfileSection}>
-          <Text>User Profile Section</Text>
+        <View style={styles.topSection}>
+          <View style={styles.vehicleDataSection}>
+            <Text>Vehicle Data </Text>
+          </View>
+          <View style={styles.vehicleImageSection}>
+            <Text>Vehicle Image </Text>
+          </View>
+          <View style={styles.vehicleStatsSection}>
+            <Text>Vehicle Stats </Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.topSection}>
-        <View style={styles.vehicleDataSection}>
-          <Text>Vehicle Data </Text>
+        <View style={styles.importantMessagesSection}>
+          <Text>Important Messages </Text>
         </View>
-        <View style={styles.vehicleImageSection}>
-          <Text>Vehicle Image </Text>
+        <View style={styles.quickControlsSection}>
+          <Text>Quick Controls </Text>
         </View>
-        <View style={styles.vehicleStatsSection}>
-          <Text>Vehicle Stats </Text>
-        </View>
-      </View>
-      <View style={styles.importantMessagesSection}>
-        <Text>Important Messages </Text>
-      </View>
-      <View style={styles.quickControlsSection}>
-        <Text>Quick Controls </Text>
-      </View>
-    </SafeAreaView> 
+      </SafeAreaView> 
+      <ExpoStatusBar style="auto" />
+    </>
   );
 }
 
