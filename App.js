@@ -1,11 +1,12 @@
-import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
 
-import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import React from "react";
 
 export default function App() {
   return (
     <>
-      <SafeAreaView style={{flex: 1, backgroundColor: "red", marginTop: StatusBar.currentHeight}}>
+      <SafeAreaView style={styles.safeAreaView}>
         <View style={styles.topNavBar}>
           <View style={styles.menuSection}>
             <Text>Menu Section</Text>
@@ -16,88 +17,93 @@ export default function App() {
         </View>
         <View style={styles.topSection}>
           <View style={styles.vehicleDataSection}>
-            <Text>Vehicle Data </Text>
+            <Text>Vehicle Data</Text>
           </View>
           <View style={styles.vehicleImageSection}>
-            <Text>Vehicle Image </Text>
+            <Text>Vehicle Image</Text>
           </View>
           <View style={styles.vehicleStatsSection}>
-            <Text>Vehicle Stats </Text>
+            <Text>Vehicle Stats</Text>
           </View>
         </View>
         <View style={styles.importantMessagesSection}>
-          <Text>Important Messages </Text>
+          <Text>Important Messages</Text>
         </View>
         <View style={styles.quickControlsSection}>
-          <Text>Quick Controls </Text>
+          <Text>Quick Controls</Text>
         </View>
-      </SafeAreaView> 
+      </SafeAreaView>
       <ExpoStatusBar style="auto" />
     </>
   );
 }
 
 const styles = StyleSheet.create({
+  safeAreaView: {
+    flex: 1,
+    backgroundColor: "red",
+    marginTop: StatusBar.currentHeight,
+  },
   topNavBar: {
-    flex: .05,
+    flex: 0.05,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: '#0000FF',
-    borderWidth: 3
+    backgroundColor: "#0000FF",
+    borderWidth: 3,
   },
   menuSection: {
     backgroundColor: "#89CFF0",
     height: "100%",
     borderWidth: 1,
-    flex: .5
+    flex: 0.5,
   },
   userProfileSection: {
     backgroundColor: "#89CFF0",
     height: "100%",
     borderWidth: 1,
-    flex: .5,
-    alignItems: "flex-end"
+    flex: 0.5,
+    alignItems: "flex-end",
   },
   topSection: {
-    flex: .35,
+    flex: 0.35,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#00FFFF",
     justifyContent: "space-evenly",
-    borderWidth: 3
+    borderWidth: 3,
   },
   vehicleDataSection: {
     borderWidth: 1,
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    flex: .33
+    flex: 0.33,
   },
   vehicleImageSection: {
     borderWidth: 1,
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    flex: .33
+    flex: 0.33,
   },
   vehicleStatsSection: {
     borderWidth: 1,
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    flex: .33
+    flex: 0.33,
   },
   importantMessagesSection: {
-    flex: .05,
+    flex: 0.05,
     borderWidth: 3,
     borderColor: "green",
-    backgroundColor: "#097969"
+    backgroundColor: "#097969",
   },
   quickControlsSection: {
-    flex: .55,
+    flex: 0.55,
     borderWidth: 3,
     borderColor: "yellow",
-    backgroundColor: "#C1E1C1"
-  }
+    backgroundColor: "#C1E1C1",
+  },
 });
