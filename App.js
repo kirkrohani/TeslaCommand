@@ -1,6 +1,7 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
 
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import QuickActionsScreen from "./src/features/actions/screens/actions.screen";
 import React from "react";
 
 export default function App() {
@@ -23,15 +24,13 @@ export default function App() {
             <Text>Vehicle Image</Text>
           </View>
           <View style={styles.vehicleStatsSection}>
-            <Text>Vehicle Stats</Text>
+            <Text>Instant Buttons</Text>
           </View>
         </View>
         <View style={styles.importantMessagesSection}>
           <Text>Important Messages</Text>
         </View>
-        <View style={styles.quickControlsSection}>
-          <Text>Quick Controls</Text>
-        </View>
+        <QuickActionsScreen />
       </SafeAreaView>
       <ExpoStatusBar style="auto" />
     </>
